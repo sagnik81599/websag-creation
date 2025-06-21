@@ -16,6 +16,7 @@ ul{
     float: right;
     list-style-type: none;
     margin-top: 25px;
+    margin-right: 30px;
 }
 ul li{
     display: inline-block;
@@ -121,4 +122,114 @@ ul li.active a{
         display: block;
         margin: 10px auto;
     }
+}
+
+/* Hide toggle by default (for desktop) */
+.menu-toggle {
+    display: none;
+}
+
+/* Responsive: max-width 768px */
+/* Hide hamburger on desktop */
+.menu-toggle {
+  display: none;
+}
+
+/* Mobile & Tablet View */
+@media screen and (max-width: 768px) {
+  .main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .logo img {
+    width: 60px;
+    height: auto;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 32px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 999;
+  }
+
+  /* Menu styling */
+#nav-menu {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.95);
+  text-align: center;
+  border-radius: 10px;
+  margin: 10px 20px 0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+#nav-menu.active {
+  max-height: 300px; /* or enough to hold all menu items */
+  padding: 10px 0;
+}
+
+  #nav-menu li {
+    margin: 10px 0;
+  }
+
+  #nav-menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+
+  #nav-menu li a:hover {
+    background-color: rgba(230, 228, 228, 0.1);
+  }
+
+  #nav-menu li.active a {
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+}
+
+  .title {
+    text-align: center;
+    margin-top: 30px;
+    color: #fff;
+  }
+
+  .title h1 {
+    font-size: 2em;
+    padding: 0 20px;
+  }
+
+  .button {
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  .btn {
+    display: block;
+    width: 80%;
+    margin: 12px auto;
+    padding: 12px;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    background: transparent;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: #fff;
+    color: #000;
+  }
 }
